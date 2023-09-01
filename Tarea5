@@ -1,0 +1,22 @@
+function indiceMenor(arr) {
+  if (arr.length === 0) {
+    return null; // Devolver null si el arreglo está vacío
+  }
+
+  let menorElemento = arr[0]; // Inicializar el menor elemento con el primer elemento del arreglo
+  let indiceMenor = 0; // Inicializar el índice del menor elemento como 0
+
+  for (let i = 1; i < arr.length; i++) {
+    if (arr[i] < menorElemento) {
+      menorElemento = arr[i];
+      indiceMenor = i;
+    }
+  }
+
+  return indiceMenor;
+}
+
+// Ejemplo de uso
+const arreglo = [5, 3, 9, 1, 7, 0];
+const indiceMenor = indiceMenor(arreglo);
+console.log(`El menor elemento está en el índice ${indiceMenor} y su valor es ${arreglo[indiceMenor]}`);
